@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Autoscuola La Torre - Patente B, AM, A1, A2, C1, C, D1, D | Carinola (CE)</title>
+    <title>Autoscuola La Torre - Patente A, B, C, D, E | Carinola (CE)</title>
     <style>
         /* RESET BASE */
         * {
@@ -21,15 +21,15 @@
         
         /* HEADER */
         header {
-            background: linear-gradient(135deg, #b30000, #d32f2f);
+            background: linear-gradient(135deg, #2c3e50, #34495e);
             color: white;
             padding: 1rem 0;
-            box-shadow: 0 2px 15px rgba(179, 0, 0, 0.3);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
-            border-bottom: 3px solid #ff5252;
+            border-bottom: 3px solid #e74c3c;
         }
         
         .header-container {
@@ -41,16 +41,27 @@
             align-items: center;
         }
         
-        .logo h1 {
-            font-size: 1.8rem;
-            font-weight: bold;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
         }
         
-        .logo .slogan {
-            font-size: 0.9rem;
+        .logo-img {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+        }
+        
+        .logo-text h1 {
+            font-size: 1.6rem;
+            font-weight: bold;
+        }
+        
+        .logo-text .slogan {
+            font-size: 0.85rem;
             opacity: 0.9;
-            color: #ffccbc;
+            color: #ecf0f1;
         }
         
         /* NAVIGATION */
@@ -62,21 +73,20 @@
         nav a {
             color: white;
             text-decoration: none;
-            font-weight: 600;
+            font-weight: 500;
             transition: all 0.3s;
             padding: 5px 10px;
             border-radius: 3px;
         }
         
         nav a:hover {
-            color: #ffeb3b;
+            color: #e74c3c;
             background: rgba(255, 255, 255, 0.1);
-            transform: translateY(-2px);
         }
         
         /* HERO SECTION */
         .hero {
-            background: url('images/foto.jpg') no-repeat center center/cover;
+            background: url('images/perguidasona-che-.jpg') no-repeat center center/cover;
             height: 70vh;
             display: flex;
             align-items: center;
@@ -94,7 +104,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(45deg, rgba(179, 0, 0, 0.7), rgba(211, 47, 47, 0.8));
+            background: linear-gradient(45deg, rgba(44, 62, 80, 0.8), rgba(52, 73, 94, 0.9));
         }
         
         .hero-content {
@@ -105,36 +115,35 @@
         }
         
         .hero h2 {
-            font-size: 3.5rem;
+            font-size: 3.2rem;
             margin-bottom: 1.5rem;
             text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
             font-weight: bold;
         }
         
         .hero p {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             margin-bottom: 2.5rem;
             text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
         }
         
         .cta-button {
             display: inline-block;
-            background: linear-gradient(135deg, #ff5252, #d32f2f);
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
             color: white;
-            padding: 18px 35px;
+            padding: 16px 32px;
             text-decoration: none;
-            border-radius: 8px;
+            border-radius: 6px;
             font-weight: bold;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             transition: all 0.3s;
-            box-shadow: 0 4px 15px rgba(179, 0, 0, 0.4);
-            border: 2px solid white;
+            box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
         }
         
         .cta-button:hover {
-            background: linear-gradient(135deg, #d32f2f, #b30000);
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(179, 0, 0, 0.6);
+            background: linear-gradient(135deg, #c0392b, #a93226);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
         }
         
         /* SECTIONS */
@@ -151,16 +160,15 @@
         h2 {
             text-align: center;
             margin-bottom: 3rem;
-            color: #b30000;
-            font-size: 2.8rem;
+            color: #2c3e50;
+            font-size: 2.5rem;
             font-weight: bold;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
         }
         
         /* SERVIZI */
         .servizi-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
             margin-top: 2rem;
         }
@@ -168,13 +176,12 @@
         .servizio-card {
             background: linear-gradient(135deg, #ffffff, #f8f9fa);
             padding: 2.5rem 2rem;
-            border-radius: 15px;
-            box-shadow: 0 8px 25px rgba(179, 0, 0, 0.15);
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
             text-align: center;
             transition: all 0.3s;
-            border: 2px solid #ffebee;
+            border: 1px solid #ecf0f1;
             position: relative;
-            overflow: hidden;
         }
         
         .servizio-card::before {
@@ -184,66 +191,68 @@
             left: 0;
             right: 0;
             height: 4px;
-            background: linear-gradient(90deg, #b30000, #ff5252);
+            background: linear-gradient(90deg, #3498db, #e74c3c);
         }
         
         .servizio-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 35px rgba(179, 0, 0, 0.25);
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
         }
         
         .servizio-card h3 {
-            color: #b30000;
+            color: #2c3e50;
             margin-bottom: 1rem;
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             font-weight: bold;
         }
         
         .servizio-icon {
-            font-size: 3rem;
-            margin-bottom: 1.5rem;
-            color: #d32f2f;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1.5rem;
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.8rem;
         }
         
         /* ANNUNCI CQC */
         .annuncio-importante {
-            background: linear-gradient(135deg, #b30000, #d32f2f);
+            background: linear-gradient(135deg, #3498db, #2980b9);
             color: white;
             padding: 2.5rem;
-            border-radius: 15px;
+            border-radius: 12px;
             text-align: center;
             margin-bottom: 2rem;
-            box-shadow: 0 8px 25px rgba(179, 0, 0, 0.3);
-            border: 3px solid #ffccbc;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .annuncio-importante::before {
-            content: '🔥';
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            font-size: 1.5rem;
+            box-shadow: 0 6px 20px rgba(52, 152, 219, 0.3);
+            border: 2px solid #aed6f1;
         }
         
         .annuncio-importante h3 {
-            font-size: 1.8rem;
-            margin-bottom: 1.5rem;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+        }
+        
+        .cqc-esteso {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-bottom: 1rem;
+            font-style: italic;
         }
         
         .data-corso {
             background: white;
-            color: #b30000;
-            padding: 0.8rem 1.5rem;
-            border-radius: 25px;
+            color: #2980b9;
+            padding: 0.7rem 1.3rem;
+            border-radius: 20px;
             font-weight: bold;
             display: inline-block;
             margin: 0.5rem;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
-            font-size: 1.1rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
         
         /* GALLERIA FOTO */
@@ -257,10 +266,9 @@
         .gallery-item {
             position: relative;
             overflow: hidden;
-            border-radius: 12px;
-            box-shadow: 0 6px 20px rgba(179, 0, 0, 0.2);
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             aspect-ratio: 4/3;
-            border: 3px solid #ffebee;
         }
         
         .gallery-item img {
@@ -271,71 +279,45 @@
         }
         
         .gallery-item:hover img {
-            transform: scale(1.1);
-        }
-        
-        .gallery-item:hover {
-            box-shadow: 0 10px 30px rgba(179, 0, 0, 0.4);
+            transform: scale(1.05);
         }
         
         /* CONTATTI */
         #contatti {
-            background: linear-gradient(135deg, #b30000, #8b0000);
+            background: linear-gradient(135deg, #2c3e50, #34495e);
             color: white;
-            position: relative;
-        }
-        
-        #contatti::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="%23ffffff" fill-opacity="0.05"><polygon points="50,0 100,50 50,100 0,50"/></svg>');
-            background-size: 80px 80px;
         }
         
         #contatti h2 {
             color: white;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
         }
         
         .contatti-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
-            position: relative;
-            z-index: 1;
         }
         
         .contatto-info {
             text-align: center;
             background: rgba(255, 255, 255, 0.1);
             padding: 2rem;
-            border-radius: 12px;
+            border-radius: 10px;
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
         }
         
         .contatto-info h3 {
             margin-bottom: 1.5rem;
-            color: #ffccbc;
-            font-size: 1.3rem;
+            color: #e74c3c;
+            font-size: 1.2rem;
         }
         
         /* FOOTER */
         footer {
-            background: linear-gradient(135deg, #8b0000, #660000);
+            background: #1a252f;
             color: white;
             text-align: center;
-            padding: 3rem 0;
-            border-top: 5px solid #ff5252;
-        }
-        
-        footer p {
-            margin: 0.5rem 0;
-            opacity: 0.9;
+            padding: 2.5rem 0;
         }
         
         /* RESPONSIVE */
@@ -349,6 +331,12 @@
                 gap: 1rem;
                 flex-wrap: wrap;
                 justify-content: center;
+            }
+            
+            .logo-container {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
             }
             
             .hero h2 {
@@ -378,9 +366,12 @@
     <!-- HEADER -->
     <header>
         <div class="header-container">
-            <div class="logo">
-                <h1>Autoscuola "La Torre"</h1>
-                <div class="slogan">La tua patente dal 1990</div>
+            <div class="logo-container">
+                <img src="images/semaforo.png" alt="Logo Autoscuola La Torre" class="logo-img">
+                <div class="logo-text">
+                    <h1>Autoscuola "La Torre"</h1>
+                    <div class="slogan">La tua patente dal 1990</div>
+                </div>
             </div>
             <nav>
                 <a href="#home">Home</a>
@@ -407,21 +398,39 @@
             <h2>I Nostri Servizi</h2>
             <div class="servizi-grid">
                 <div class="servizio-card">
-                    <div class="servizio-icon">🚗</div>
+                    <div class="servizio-icon">A-B-C-D-E</div>
                     <h3>Rilascio Patenti</h3>
-                    <p>Patente B, AM, A1, A2, C1, C, D1, D e superiori</p>
+                    <p>Patenti di categoria A, B, C, D, E, ciclomotori e nautica</p>
                 </div>
                 
                 <div class="servizio-card">
-                    <div class="servizio-icon">📄</div>
-                    <h3>Duplicati Patenti</h3>
-                    <p>Smarrimento, deterioramento o furto</p>
+                    <div class="servizio-icon">CQC</div>
+                    <h3>Carta di Qualificazione Conducente</h3>
+                    <p>Corsi e rinnovi CQC per professionisti</p>
                 </div>
                 
                 <div class="servizio-card">
-                    <div class="servizio-icon">🏥</div>
-                    <h3>Visite Mediche</h3>
-                    <p>Con medico competente in sede</p>
+                    <div class="servizio-icon">📋</div>
+                    <h3>Convalida e Duplicato Patente</h3>
+                    <p>Convalida patente estera e duplicati per smarrimento</p>
+                </div>
+                
+                <div class="servizio-card">
+                    <div class="servizio-icon">🔄</div>
+                    <h3>Passaggio di Proprietà</h3>
+                    <p>Pratiche per passaggio proprietà auto e moto</p>
+                </div>
+                
+                <div class="servizio-card">
+                    <div class="servizio-icon">🔢</div>
+                    <h3>Targhe Veicoli</h3>
+                    <p>Targhe per auto, moto e ciclomotori</p>
+                </div>
+                
+                <div class="servizio-card">
+                    <div class="servizio-icon">🚙</div>
+                    <h3>Immatricolazioni</h3>
+                    <p>Immatricolazione e reimmatricolazione veicoli</p>
                 </div>
                 
                 <div class="servizio-card">
@@ -431,21 +440,15 @@
                 </div>
                 
                 <div class="servizio-card">
-                    <div class="servizio-icon">🚛</div>
-                    <h3>Rinnovi CQC</h3>
-                    <p>Formazione continua professionisti</p>
-                </div>
-                
-                <div class="servizio-card">
-                    <div class="servizio-icon">📑</div>
-                    <h3>Passaggi Proprietà</h3>
-                    <p>Pratiche auto e moto</p>
-                </div>
-                
-                <div class="servizio-card">
                     <div class="servizio-icon">💰</div>
                     <h3>Pagamento Bolli Auto</h3>
                     <p>Servizio di pagamento bolli auto</p>
+                </div>
+                
+                <div class="servizio-card">
+                    <div class="servizio-icon">🏥</div>
+                    <h3>Visite Mediche</h3>
+                    <p>Con medico competente in sede</p>
                 </div>
                 
                 <div class="servizio-card">
@@ -453,17 +456,27 @@
                     <h3>Certificazioni SERMETRA</h3>
                     <p>PEC, Posta Certificata e SPID</p>
                 </div>
+                
+                <div class="servizio-card">
+                    <div class="servizio-icon">🔄</div>
+                    <h3>Rinnovi CQC</h3>
+                    <p>Formazione continua professionisti</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- ANNUNCI CQC -->
-    <section id="annunci" style="background: linear-gradient(135deg, #fff5f5, #ffebee);">
+    <section id="annunci" style="background: #f8f9fa;">
         <div class="container">
             <h2>Prossimi Corsi CQC</h2>
+            <p style="text-align: center; margin-bottom: 2rem; color: #666;">
+                Carta di Qualificazione del Conducente
+            </p>
             
             <div class="annuncio-importante">
                 <h3>🚛 CORSO CQC MERCI</h3>
+                <div class="cqc-esteso">Carta di Qualificazione del Conducente - Merci</div>
                 <p>Prossima sessione:</p>
                 <div class="data-corso">15 Gennaio 2024</div>
                 <p>Prenotazioni aperte - Posti limitati</p>
@@ -471,13 +484,14 @@
             
             <div class="annuncio-importante">
                 <h3>🚌 CORSO CQC PERSONE</h3>
+                <div class="cqc-esteso">Carta di Qualificazione del Conducente - Persone</div>
                 <p>Prossima sessione:</p>
                 <div class="data-corso">22 Gennaio 2024</div>
                 <p>Prenotazioni aperte - Posti limitati</p>
             </div>
             
             <div style="text-align: center; margin-top: 2rem;">
-                <p style="color: #b30000; font-weight: bold; font-size: 1.1rem;">Contattaci per maggiori informazioni e prenotazioni</p>
+                <p style="color: #2c3e50; font-weight: bold; font-size: 1.1rem;">Contattaci per maggiori informazioni e prenotazioni</p>
                 <a href="#contatti" class="cta-button">Info e Prenotazioni</a>
             </div>
         </div>
@@ -495,10 +509,10 @@
                     <img src="images/aula.jpg" alt="Aula teoria">
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1581093450334-5c4ea3a56db0?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Auto scuola">
+                    <img src="images/logo.png" alt="Logo Autoscuola">
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1581093450334-5c4ea3a56db0?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Reception">
+                    <img src="images/persona-che-guida.jpg" alt="Lezione di guida">
                 </div>
             </div>
         </div>
