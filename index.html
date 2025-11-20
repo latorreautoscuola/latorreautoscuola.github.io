@@ -22,8 +22,8 @@
         
         /* HEADER */
         header {
-            background: #ffffff; /* Sfondo bianco */
-            color: #333; /* Testo scuro */
+            background: #ffffff;
+            color: #333;
             padding: 1rem 0;
             box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
             position: fixed;
@@ -58,23 +58,23 @@
         .logo-text h1 {
             font-size: 1.6rem;
             font-weight: bold;
-            color: #e74c3c; /* Rosso per il nome */
+            color: #e74c3c;
         }
         
         .logo-text .slogan {
             font-size: 0.85rem;
             opacity: 0.9;
-            color: #666; /* Grigio scuro per lo slogan */
+            color: #666;
         }
 
-        /* NAVIGATION */
-        nav.nav-links {
+        /* NAVIGATION - DESKTOP */
+        .nav-desktop {
             display: flex;
             gap: 2rem;
         }
         
-        nav a {
-            color: #333; /* Testo scuro */
+        .nav-desktop a {
+            color: #333;
             text-decoration: none;
             font-weight: 500;
             transition: all 0.3s;
@@ -82,7 +82,7 @@
             border-radius: 3px;
         }
         
-        nav a:hover {
+        .nav-desktop a:hover {
             color: #e74c3c;
             background: rgba(231, 76, 60, 0.1);
         }
@@ -90,48 +90,72 @@
         /* HAMBURGER MENU BUTTON */
         .hamburger {
             display: none;
-            font-size: 2rem;
+            font-size: 1.8rem;
             cursor: pointer;
             color: #333;
             user-select: none;
+            padding: 5px;
+            transition: all 0.3s;
+        }
+
+        .hamburger:hover {
+            color: #e74c3c;
         }
 
         /* MOBILE DROPDOWN MENU */
-        nav.nav-links.mobile {
+        .nav-mobile {
             display: none;
             flex-direction: column;
-            gap: 1rem;
+            gap: 0;
             background: #ffffff;
-            padding: 1rem;
             position: absolute;
             right: 20px;
-            top: 80px;
+            top: 100%;
             border-radius: 10px;
-            width: 200px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            width: 220px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
             border: 1px solid #ddd;
+            z-index: 1001;
+            overflow: hidden;
         }
 
-        nav.nav-links.mobile a {
-            color: #333;
-        }
-
-        nav.nav-links.mobile.show {
+        .nav-mobile.show {
             display: flex;
+        }
+
+        .nav-mobile a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 15px 20px;
+            transition: all 0.3s;
+            border-bottom: 1px solid #f0f0f0;
+            display: block;
+        }
+
+        .nav-mobile a:last-child {
+            border-bottom: none;
+        }
+
+        .nav-mobile a:hover {
+            color: #e74c3c;
+            background: rgba(231, 76, 60, 0.1);
         }
 
         /* RESPONSIVE */
         @media (max-width: 768px) {
-            nav.nav-links {
+            .nav-desktop {
                 display: none;
             }
 
             .hamburger {
                 display: block;
             }
+        }
 
-            .header-container {
-                flex-direction: row;
+        @media (min-width: 769px) {
+            .nav-mobile {
+                display: none !important;
             }
         }
         
@@ -155,7 +179,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(45deg, rgba(44, 62, 80, 0.8), rgba(52, 73, 94, 0.9));
+            background: linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
         }
         
         .hero-content {
@@ -168,14 +192,16 @@
         .hero h2 {
             font-size: 3.2rem;
             margin-bottom: 1.5rem;
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
             font-weight: bold;
+            color: #ffffff;
         }
         
         .hero p {
             font-size: 1.3rem;
             margin-bottom: 2.5rem;
-            text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
+            color: #ffffff;
         }
         
         .cta-button {
@@ -295,7 +321,7 @@
             width: 100%;
             height: 100%;
             object-fit: contain;
-            filter: brightness(0); /* Icone bianche */
+            filter: brightness(0) invert(1);
         }
         
         /* ANNUNCI CQC */
@@ -401,19 +427,13 @@
         /* RESPONSIVE */
         @media (max-width: 768px) {
             .header-container {
-                flex-direction: column;
-                gap: 1rem;
-            }
-            
-            nav {
-                gap: 1rem;
-                flex-wrap: wrap;
-                justify-content: center;
+                flex-direction: row;
+                justify-content: space-between;
             }
             
             .logo-container {
-                flex-direction: column;
-                text-align: center;
+                flex-direction: row;
+                text-align: left;
                 gap: 10px;
             }
             
@@ -425,12 +445,8 @@
                 font-size: 1.1rem;
             }
             
-            header {
-                position: relative;
-            }
-            
             .hero {
-                margin-top: 0;
+                margin-top: 80px;
                 height: 60vh;
             }
             
@@ -439,7 +455,6 @@
             }
         }
     </style>
-
 </head>
 <body>
 <!-- HEADER -->
@@ -454,27 +469,27 @@
                 </div>
             </div>
 
-            <!-- MENU LINKS -->
-            <nav class="nav-links">
+            <!-- MENU DESKTOP -->
+            <nav class="nav-desktop">
                 <a href="#home">Home</a>
                 <a href="#storia">La Nostra Storia</a>
                 <a href="#servizi">Servizi</a>
-                <a href="#galleria">Galleria</a>
                 <a href="#annunci">Corsi CQC</a>
+                <a href="#galleria">Galleria</a>
                 <a href="#contatti">Contatti</a>
             </nav>
 
-             <!-- HAMBURGER BUTTON -->
+            <!-- HAMBURGER BUTTON -->
             <div class="hamburger" onclick="toggleMenu()">☰</div>
 
             <!-- MENU MOBILE -->
-            <nav class="mobile-menu" id="mobileMenu">
-                <a href="#home" onclick="toggleMenu()">Home</a>
-                <a href="#storia" onclick="toggleMenu()">La Nostra Storia</a>
-                <a href="#servizi" onclick="toggleMenu()">Servizi</a>
-                <a href="#annunci" onclick="toggleMenu()">Corsi CQC</a>
-                <a href="#galleria" onclick="toggleMenu()">Galleria</a>
-                <a href="#contatti" onclick="toggleMenu()">Contatti</a>
+            <nav class="nav-mobile" id="mobileMenu">
+                <a href="#home" onclick="closeMenu()">Home</a>
+                <a href="#storia" onclick="closeMenu()">La Nostra Storia</a>
+                <a href="#servizi" onclick="closeMenu()">Servizi</a>
+                <a href="#annunci" onclick="closeMenu()">Corsi CQC</a>
+                <a href="#galleria" onclick="closeMenu()">Galleria</a>
+                <a href="#contatti" onclick="closeMenu()">Contatti</a>
             </nav>
 
         </div>
@@ -514,20 +529,20 @@
                 
                 <div class="servizio-card">
                     <div class="servizio-icon-img">
-                        <img src="images/icone/cqc.png" alt="Icona CQC">
-                    </div>
-                    <h3>Carta di Qualificazione Conducente</h3>
-                    <p>Corsi e rinnovi CQC per professionisti</p>
-                </div>
-                
-                <div class="servizio-card">
-                    <div class="servizio-icon-img">
                         <img src="images/icone/duplicato.png" alt="Icona duplicato">
                     </div>
                     <h3>Convalida e Duplicato Patente</h3>
                     <p>Convalida patente estera e duplicati per smarrimento</p>
                 </div>
                 
+                 <div class="servizio-card">
+                    <div class="servizio-icon-img">
+                        <img src="images/icone/cqc.png" alt="Icona CQC">
+                    </div>
+                    <h3>Carta di Qualificazione Conducente</h3>
+                    <p>Corsi e rinnovi CQC per professionisti</p>
+                </div>
+
                 <div class="servizio-card">
                     <div class="servizio-icon-img">
                         <img src="images/icone/passaggio-proprieta.png" alt="Icona passaggio proprietà">
@@ -573,7 +588,7 @@
                         <img src="images/icone/visite-mediche.png" alt="Icona visite mediche">
                     </div>
                     <h3>Visite Mediche</h3>
-                    <p>Con medico competente in sede</p>
+                    <p>Con medico militare competente in sede</p>
                 </div>
                 
                 <div class="servizio-card">
@@ -676,17 +691,33 @@
         </div>
     </footer>
 
-    <!-- MENU SCRIPT -->
+    <!-- MENU SCRIPT CORRETTO -->
     <script>
     function toggleMenu() {
-        const menu = document.querySelector('.nav-links');
-
-        // se il menu è desktop, lo trasformiamo in mobile
-        menu.classList.add('mobile');
-
-        // apri/chiudi
-        menu.classList.toggle('show');
+        const mobileMenu = document.getElementById('mobileMenu');
+        mobileMenu.classList.toggle('show');
     }
+
+    function closeMenu() {
+        const mobileMenu = document.getElementById('mobileMenu');
+        mobileMenu.classList.remove('show');
+    }
+
+    // Chiudi il menu quando si clicca fuori
+    document.addEventListener('click', function(event) {
+        const mobileMenu = document.getElementById('mobileMenu');
+        const hamburger = document.querySelector('.hamburger');
+        
+        if (!hamburger.contains(event.target) && !mobileMenu.contains(event.target)) {
+            mobileMenu.classList.remove('show');
+        }
+    });
+
+    // Chiudi il menu quando si scorre
+    window.addEventListener('scroll', function() {
+        const mobileMenu = document.getElementById('mobileMenu');
+        mobileMenu.classList.remove('show');
+    });
     </script>
 
 </body>
