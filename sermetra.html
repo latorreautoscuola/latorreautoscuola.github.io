@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sermetra - Autoscuola La Torre</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .service-card {
+            background: linear-gradient(135deg, #ffffff, #f8f9fa);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            transition: all 0.3s;
+            border: 1px solid #ecf0f1;
+            position: relative;
+            min-height: 280px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #3498db, #e74c3c);
+            border-radius: 12px 12px 0 0;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        }
+        
+        .service-card h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+        
+        .service-card p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .content-section {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .feature-list {
+            margin: 1rem 0 2rem 2rem;
+        }
+
+        .feature-list li {
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+        }
+
+        .info-box {
+            background: linear-gradient(135deg, #e8f5e8, #c8e6c9);
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            border-left: 4px solid #4caf50;
+        }
+
+        .benefits-box {
+            background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            border-left: 4px solid #2196f3;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .comparison-table th, .comparison-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .comparison-table th {
+            background: #f8f9fa;
+            font-weight: bold;
+        }
+
+        .comparison-table tr:hover {
+            background: #f5f5f5;
+        }
+
+        .badge {
+            background: #e74c3c;
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-left: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .service-card {
+                min-height: auto;
+            }
+            
+            .comparison-table {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="images/semaforo.png" alt="Logo Autoscuola La Torre" class="logo-img">
+                <div class="logo-text">
+                    <h1>Autoscuola "La Torre"</h1>
+                    <div class="slogan">La tua patente dal 1995</div>
+                </div>
+            </div>
+            <nav class="nav-desktop">
+                <a href="index.html">Home</a>
+                <a href="index.html#storia">La Nostra Storia</a>
+                <a href="index.html#servizi">Servizi</a>
+                <a href="index.html#annunci">Corsi CQC</a>
+                <a href="index.html#galleria">Galleria</a>
+                <a href="index.html#contatti">Contatti</a>
+            </nav>
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
+            <nav class="nav-mobile" id="mobileMenu">
+                <a href="index.html" onclick="closeMenu()">Home</a>
+                <a href="index.html#storia" onclick="closeMenu()">La Nostra Storia</a>
+                <a href="index.html#servizi" onclick="closeMenu()">Servizi</a>
+                <a href="index.html#annunci" onclick="closeMenu()">Corsi CQC</a>
+                <a href="index.html#galleria" onclick="closeMenu()">Galleria</a>
+                <a href="index.html#contatti" onclick="closeMenu()">Contatti</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CONTENUTO SPECIFICO -->
+    <section class="hero" style="height: 40vh; margin-top: 80px; background: linear-gradient(135deg, #2c3e50, #34495e);">
+        <div class="hero-content">
+            <h1>Sermetra</h1>
+            <p>Servizi digitali certificati per privati e aziende</p>
+        </div>
+    </section>
+
+    <section style="padding: 4rem 0;">
+        <div class="container">
+            <div class="content-section">
+                <h2>Servizi Digitali Sermetra</h2>
+                
+                <div class="services-grid">
+                    <div class="service-card">
+                        <h3>PEC <span class="badge">RICHIESTA</span></h3>
+                        <p>Posta Elettronica Certificata con valore legale equivalente alla raccomandata con ricevuta di ritorno.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>SPID</h3>
+                        <p>Sistema Pubblico di Identità Digitale per accedere a tutti i servizi della Pubblica Amministrazione.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>Firma Digitale</h3>
+                        <p>Firma documenti digitalmente con valore legale. Per contratti, fatture e documenti ufficiali.</p>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <h3>Cos'è il Consorzio Sermetra</h3>
+                    <p>Sermetra è un consorzio di autoscuole abilitate a fornire servizi digitali certificati. Grazie alla nostra appartenenza al consorzio, possiamo offrirti servizi digitali avanzati con la stessa professionalità che ci distingue da oltre 30 anni.</p>
+                </div>
+
+                <div class="benefits-box">
+                    <h3>Perché Scegliere i Nostri Servizi Digitali</h3>
+                    <ul class="feature-list">
+                        <li><strong>Assistenza in sede</strong> - Niente call center, ti seguiamo di persona</li>
+                        <li><strong>Competenza tecnica</strong> - Spieghiamo tutto in modo semplice e chiaro</li>
+                        <li><strong>Risparmio di tempo</strong> - Eviti code e pratiche burocratiche</li>
+                        <li><strong>Supporto continuo</strong> - Anche dopo l'attivazione del servizio</li>
+                        <li><strong>Prezzi competitivi</strong> - Costi trasparenti senza sorprese</li>
+                    </ul>
+                </div>
+
+                <h3>Dettaglio Servizi</h3>
+
+                <h4>Posta Elettronica Certificata (PEC)</h4>
+                <p>La PEC è obbligatoria per:</p>
+                <ul class="feature-list">
+                    <li><strong>Professionisti</strong> (commercialisti, avvocati, ingegneri)</li>
+                    <li><strong>Aziende e Partite IVA</strong></li>
+                    <li><strong>Associazioni e Onlus</strong></li>
+                    <li><strong>Comunicazioni con la PA</strong></li>
+                </ul>
+
+                <h4>Sistema Pubblico di Identità Digitale (SPID)</h4>
+                <p>Con SPID puoi accedere a:</p>
+                <ul class="feature-list">
+                    <li>INPS e servizi pensionistici</li>
+                    <li>Agenzia delle Entrate</li>
+                    <li>Servizi sanitari online</li>
+                    <li>Comuni e servizi locali</li>
+                    <li>Concorsi pubblici</li>
+                </ul>
+
+                <h4>Firma Digitale</h4>
+                <p>La firma digitale è indispensabile per:</p>
+                <ul class="feature-list">
+                    <li>Fatture elettroniche</li>
+                    <li>Contratti e documenti legali</li>
+                    <li>Domande e istanze alla PA</li>
+                    <li>Bandi e gare d'appalto</li>
+                    <li>Documenti aziendali</li>
+                </ul>
+
+                <h3>Confronto Servizi</h3>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Servizio</th>
+                            <th>Chi lo usa</th>
+                            <th>Costo Indicativo</th>
+                            <th>Durata</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>PEC</strong></td>
+                            <td>Professionisti, Aziende</td>
+                            <td>€ 20/anno</td>
+                            <td>1 anno (rinnovabile)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>SPID</strong></td>
+                            <td>Tutti i cittadini</td>
+                            <td>Gratuito</td>
+                            <td>3 anni</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Firma Digitale</strong></td>
+                            <td>Professionisti, Aziende</td>
+                            <td>€ 30-50/anno</td>
+                            <td>3 anni</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Documenti Richiesti</h3>
+                <ul class="feature-list">
+                    <li><strong>Per PEC e Firma Digitale:</strong>
+                        <ul style="margin-left: 2rem; margin-top: 0.5rem;">
+                            <li>Documento di identità valido</li>
+                            <li>Codice fiscale</li>
+                            <li>Tessera sanitaria</li>
+                        </ul>
+                    </li>
+                    <li><strong>Per SPID:</strong>
+                        <ul style="margin-left: 2rem; margin-top: 0.5rem;">
+                            <li>Documento di identità valido</li>
+                            <li>Tessera sanitaria</li>
+                            <li>Indirizzo email e numero di telefono</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h3>Vantaggi per le Aziende</h3>
+                <ul class="feature-list">
+                    <li><strong>Dematerializzazione documentale</strong> - Meno carta, più efficienza</li>
+                    <li><strong>Riduzione costi</strong> - Niente spedizioni cartacee</li>
+                    <li><strong>Sicurezza legale</strong> - Valore probatorio garantito</li>
+                    <li><strong>Efficienza operativa</strong> - Procedure più veloci</li>
+                    <li><strong>Compliance normativa</strong> - Rispetto degli obblighi di legge</li>
+                </ul>
+
+                <div style="text-align: center; margin-top: 3rem;">
+                    <a href="index.html#contatti" class="cta-button">Attiva un Servizio</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Autoscuola La Torre - P.IVA 12345678901</p>
+            <p>Autorizzata dal MIT - Certificazione ISO 9001</p>
+        </div>
+    </footer>
+
+    <!-- SCRIPT -->
+    <script>
+    function toggleMenu() {
+        const mobileMenu = document.getElementById('mobileMenu');
+        mobileMenu.classList.toggle('show');
+    }
+
+    function closeMenu() {
+        const mobileMenu = document.getElementById('mobileMenu');
+        mobileMenu.classList.remove('show');
+    }
+
+    document.addEventListener('click', function(event) {
+        const mobileMenu = document.getElementById('mobileMenu');
+        const hamburger = document.querySelector('.hamburger');
+        
+        if (!hamburger.contains(event.target) && !mobileMenu.contains(event.target)) {
+            mobileMenu.classList.remove('show');
+        }
+    });
+
+    window.addEventListener('scroll', function() {
+        const mobileMenu = document.getElementById('mobileMenu');
+        mobileMenu.classList.remove('show');
+    });
+    </script>
+</body>
+</html>
