@@ -53,11 +53,13 @@
             width: 60px;
             height: 60px;
             object-fit: contain;
+            filter: brightness(0) invert(1); /* Trasforma il logo in bianco */
         }
         
         .logo-text h1 {
             font-size: 1.6rem;
             font-weight: bold;
+            color: #e74c3c; /* Rosso per il nome */
         }
         
         .logo-text .slogan {
@@ -191,6 +193,25 @@
             box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
         }
         
+        /* STORIA SECTION */
+        .storia {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            padding: 4rem 0;
+        }
+        
+        .storia-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #2c3e50;
+        }
+        
+        .storia-content p {
+            margin-bottom: 1.5rem;
+        }
+        
         /* SECTIONS */
         section {
             padding: 5rem 0;
@@ -251,7 +272,7 @@
             font-weight: bold;
         }
         
-        .servizio-icon {
+        .servizio-icon-img {
             width: 80px;
             height: 80px;
             margin: 0 auto 1.5rem;
@@ -263,6 +284,14 @@
             color: white;
             font-weight: bold;
             font-size: 1.8rem;
+            padding: 15px;
+        }
+        
+        .servizio-icon-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            filter: brightness(0) invert(1); /* Icone bianche */
         }
         
         /* ANNUNCI CQC */
@@ -312,7 +341,7 @@
             position: relative;
             overflow: hidden;
             border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(243, 240, 240, 0.982);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             aspect-ratio: 4/3;
         }
         
@@ -423,6 +452,7 @@
             <!-- MENU LINKS -->
             <nav class="nav-links">
                 <a href="#home">Home</a>
+                <a href="#storia">La Nostra Storia</a>
                 <a href="#servizi">Servizi</a>
                 <a href="#annunci">Corsi CQC</a>
                 <a href="#galleria">Galleria</a>
@@ -435,7 +465,6 @@
         </div>
     </header>
 
-
     <!-- HERO SECTION -->
     <section id="home" class="hero">
         <div class="hero-content">
@@ -445,101 +474,111 @@
         </div>
     </section>
 
-<!-- SERVIZI -->
-<section id="servizi">
-    <div class="container">
-        <h2>I Nostri Servizi</h2>
-        <div class="servizi-grid">
-            <div class="servizio-card">
-                <div class="servizio-icon-img">
-                    <img src="images/persona.png" alt="Icona patenti">
-                </div>
-                <h3>Rilascio Patenti</h3>
-                <p>Patenti di categoria A, B, C, D, E, ciclomotori e nautica</p>
-            </div>
-            
-            <div class="servizio-card">
-                <div class="servizio-icon-img">
-                    <img src="images/icone/cqc.png" alt="Icona CQC">
-                </div>
-                <h3>Carta di Qualificazione Conducente</h3>
-                <p>Corsi e rinnovi CQC per professionisti</p>
-            </div>
-            
-            <div class="servizio-card">
-                <div class="servizio-icon-img">
-                    <img src="images/icone/duplicato.png" alt="Icona duplicato">
-                </div>
-                <h3>Convalida e Duplicato Patente</h3>
-                <p>Convalida patente estera e duplicati per smarrimento</p>
-            </div>
-            
-            <div class="servizio-card">
-                <div class="servizio-icon-img">
-                    <img src="images/icone/passaggio-proprieta.png" alt="Icona passaggio proprietà">
-                </div>
-                <h3>Passaggio di Proprietà</h3>
-                <p>Pratiche per passaggio proprietà auto e moto</p>
-            </div>
-            
-            <div class="servizio-card">
-                <div class="servizio-icon-img">
-                    <img src="images/icone/targhe.png" alt="Icona targhe">
-                </div>
-                <h3>Targhe Veicoli</h3>
-                <p>Targhe per auto, moto e ciclomotori</p>
-            </div>
-            
-            <div class="servizio-card">
-                <div class="servizio-icon-img">
-                    <img src="images/icone/immatricolazioni.png" alt="Icona immatricolazioni">
-                </div>
-                <h3>Immatricolazioni</h3>
-                <p>Immatricolazione e reimmatricolazione veicoli</p>
-            </div>
-            
-            <div class="servizio-card">
-                <div class="servizio-icon-img">
-                    <img src="images/icone/porto-armi.png" alt="Icona porto d'armi">
-                </div>
-                <h3>Porto d'Armi</h3>
-                <p>Rilascio e rinnovo porto d'armi</p>
-            </div>
-            
-            <div class="servizio-card">
-                <div class="servizio-icon-img">
-                    <img src="images/icone/bolli.png" alt="Icona bolli auto">
-                </div>
-                <h3>Pagamento Bolli Auto</h3>
-                <p>Servizio di pagamento bolli auto</p>
-            </div>
-            
-            <div class="servizio-card">
-                <div class="servizio-icon-img">
-                    <img src="images/icone/visite-mediche.png" alt="Icona visite mediche">
-                </div>
-                <h3>Visite Mediche</h3>
-                <p>Con medico competente in sede</p>
-            </div>
-            
-            <div class="servizio-card">
-                <div class="servizio-icon-img">
-                    <img src="images/icone/sermetra.png" alt="Icona certificazioni">
-                </div>
-                <h3>Certificazioni SERMETRA</h3>
-                <p>PEC, Posta Certificata e SPID</p>
-            </div>
-            
-            <div class="servizio-card">
-                <div class="servizio-icon-img">
-                    <img src="images/icone/rinnovi-cqc.png" alt="Icona rinnovi CQC">
-                </div>
-                <h3>Rinnovi CQC</h3>
-                <p>Formazione continua professionisti</p>
+    <!-- STORIA SECTION -->
+    <section id="storia" class="storia">
+        <div class="container">
+            <div class="storia-content">
+                <p>La nostra storia inizia molti anni fa come agenzia di pratiche auto, un punto di riferimento affidabile per la comunità di Carinola e dintorni. Con passione e dedizione, abbiamo costruito nel tempo una solida reputazione basata sulla competenza e sul servizio al cliente.</p>
+                <p>Nel 1990 abbiamo compiuto un importante passo avanti trasformando la nostra attività in un'autoscuola a tutti gli effetti. Da allora, come <strong>Autoscuola "La Torre"</strong>, abbiamo accompagnato migliaia di persone nel conseguimento della patente, crescendo insieme alla nostra comunità e mantenendo sempre vivo lo spirito di servizio che ci ha sempre contraddistinto.</p>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+
+    <!-- SERVIZI -->
+    <section id="servizi">
+        <div class="container">
+            <h2>I Nostri Servizi</h2>
+            <div class="servizi-grid">
+                <div class="servizio-card">
+                    <div class="servizio-icon-img">
+                        <img src="images/persona.png" alt="Icona patenti">
+                    </div>
+                    <h3>Rilascio Patenti</h3>
+                    <p>Patenti di categoria A, B, C, D, E, ciclomotori e nautica</p>
+                </div>
+                
+                <div class="servizio-card">
+                    <div class="servizio-icon-img">
+                        <img src="images/icone/cqc.png" alt="Icona CQC">
+                    </div>
+                    <h3>Carta di Qualificazione Conducente</h3>
+                    <p>Corsi e rinnovi CQC per professionisti</p>
+                </div>
+                
+                <div class="servizio-card">
+                    <div class="servizio-icon-img">
+                        <img src="images/icone/duplicato.png" alt="Icona duplicato">
+                    </div>
+                    <h3>Convalida e Duplicato Patente</h3>
+                    <p>Convalida patente estera e duplicati per smarrimento</p>
+                </div>
+                
+                <div class="servizio-card">
+                    <div class="servizio-icon-img">
+                        <img src="images/icone/passaggio-proprieta.png" alt="Icona passaggio proprietà">
+                    </div>
+                    <h3>Passaggio di Proprietà</h3>
+                    <p>Pratiche per passaggio proprietà auto e moto</p>
+                </div>
+                
+                <div class="servizio-card">
+                    <div class="servizio-icon-img">
+                        <img src="images/icone/targhe.png" alt="Icona targhe">
+                    </div>
+                    <h3>Targhe Veicoli</h3>
+                    <p>Targhe per auto, moto e ciclomotori</p>
+                </div>
+                
+                <div class="servizio-card">
+                    <div class="servizio-icon-img">
+                        <img src="images/icone/immatricolazioni.png" alt="Icona immatricolazioni">
+                    </div>
+                    <h3>Immatricolazioni</h3>
+                    <p>Immatricolazione e reimmatricolazione veicoli</p>
+                </div>
+                
+                <div class="servizio-card">
+                    <div class="servizio-icon-img">
+                        <img src="images/icone/porto-armi.png" alt="Icona porto d'armi">
+                    </div>
+                    <h3>Porto d'Armi</h3>
+                    <p>Rilascio e rinnovo porto d'armi</p>
+                </div>
+                
+                <div class="servizio-card">
+                    <div class="servizio-icon-img">
+                        <img src="images/icone/bolli.png" alt="Icona bolli auto">
+                    </div>
+                    <h3>Pagamento Bolli Auto</h3>
+                    <p>Servizio di pagamento bolli auto</p>
+                </div>
+                
+                <div class="servizio-card">
+                    <div class="servizio-icon-img">
+                        <img src="images/icone/visite-mediche.png" alt="Icona visite mediche">
+                    </div>
+                    <h3>Visite Mediche</h3>
+                    <p>Con medico competente in sede</p>
+                </div>
+                
+                <div class="servizio-card">
+                    <div class="servizio-icon-img">
+                        <img src="images/icone/sermetra.png" alt="Icona certificazioni">
+                    </div>
+                    <h3>Certificazioni SERMETRA</h3>
+                    <p>PEC, Posta Certificata e SPID</p>
+                </div>
+                
+                <div class="servizio-card">
+                    <div class="servizio-icon-img">
+                        <img src="images/icone/rinnovi-cqc.png" alt="Icona rinnovi CQC">
+                    </div>
+                    <h3>Rinnovi CQC</h3>
+                    <p>Formazione continua professionisti</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- ANNUNCI CQC -->
     <section id="annunci" style="background: #f8f9fa;">
@@ -629,8 +668,7 @@
         </div>
     </footer>
 
-
-        <!-- MENU SCRIPT -->
+    <!-- MENU SCRIPT -->
     <script>
     function toggleMenu() {
         const menu = document.querySelector('.nav-links');
