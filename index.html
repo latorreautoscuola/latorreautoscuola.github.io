@@ -222,6 +222,26 @@
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
         }
+
+        .scopri-button {
+            display: inline-block;
+            background: transparent;
+            color: #e74c3c;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: all 0.3s;
+            border: 2px solid #e74c3c;
+            margin-top: 1rem;
+        }
+        
+        .scopri-button:hover {
+            background: #e74c3c;
+            color: white;
+            transform: translateY(-2px);
+        }
         
         /* STORIA SECTION */
         .storia {
@@ -261,23 +281,27 @@
             font-weight: bold;
         }
         
-        /* SERVIZI */
+        /* SERVIZI AGGIORNATI */
         .servizi-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
             margin-top: 2rem;
         }
         
         .servizio-card {
             background: linear-gradient(135deg, #ffffff, #f8f9fa);
-            padding: 2.5rem 2rem;
-            border-radius: 12px;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            padding: 3rem 2rem;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
             text-align: center;
             transition: all 0.3s;
             border: 1px solid #ecf0f1;
             position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 400px;
         }
         
         .servizio-card::before {
@@ -286,26 +310,33 @@
             top: 0;
             left: 0;
             right: 0;
-            height: 4px;
+            height: 5px;
             background: linear-gradient(90deg, #3498db, #e74c3c);
+            border-radius: 15px 15px 0 0;
         }
         
         .servizio-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
         }
         
         .servizio-card h3 {
             color: #2c3e50;
-            margin-bottom: 1rem;
-            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
             font-weight: bold;
+        }
+        
+        .servizio-card p {
+            color: #666;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
         }
         
         .servizio-icon-img {
             width: 80px;
             height: 80px;
-            margin: 0 auto 1.5rem;
+            margin: 0 auto 2rem;
             background: linear-gradient(135deg, #3498db, #2980b9);
             border-radius: 50%;
             display: flex;
@@ -453,6 +484,16 @@
             h2 {
                 font-size: 2.2rem;
             }
+
+            .servizi-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .servizio-card {
+                min-height: 350px;
+                padding: 2rem 1.5rem;
+            }
         }
     </style>
 </head>
@@ -514,91 +555,80 @@
         </div>
     </section>
 
-    <!-- SERVIZI -->
+    <!-- SERVIZI AGGIORNATI -->
     <section id="servizi">
         <div class="container">
             <h2>I Nostri Servizi</h2>
             <div class="servizi-grid">
+                <!-- 1) Corsi & Patenti -->
                 <div class="servizio-card">
                     <div class="servizio-icon-img">
-                        <img src="images/persona.png" alt="Icona patenti">
+                        <img src="images/persona.png" alt="Icona corsi e patenti">
                     </div>
-                    <h3>Rilascio Patenti</h3>
-                    <p>Patenti di categoria A, B, C, D, E, ciclomotori e nautica</p>
+                    <h3>Corsi & Patenti</h3>
+                    <p>Patenti A, B, C, D, E, ciclomotori e nautica. Lezioni teoriche quotidiane dalle 17 alle 18. Possibilità di esercitarsi con i quiz sui PC in sede.</p>
+                    <a href="corsi-patenti.html" class="scopri-button">Scopri di più</a>
                 </div>
                 
+                <!-- 2) Rinnovo e Duplicati -->
                 <div class="servizio-card">
                     <div class="servizio-icon-img">
-                        <img src="images/icone/duplicato.png" alt="Icona duplicato">
+                        <img src="images/icone/duplicato.png" alt="Icona rinnovi e duplicati">
                     </div>
-                    <h3>Convalida e Duplicato Patente</h3>
-                    <p>Convalida patente estera e duplicati per smarrimento</p>
+                    <h3>Rinnovo e Duplicati</h3>
+                    <p>Rinnovo patenti, duplicati per smarrimento e convalida patenti estere. Visite mediche in sede con medico militare competente.</p>
+                    <a href="rinnovi-duplicati.html" class="scopri-button">Scopri di più</a>
                 </div>
                 
-                 <div class="servizio-card">
+                <!-- 3) Pratiche Auto -->
+                <div class="servizio-card">
+                    <div class="servizio-icon-img">
+                        <img src="images/icone/passaggio-proprieta.png" alt="Icona pratiche auto">
+                    </div>
+                    <h3>Pratiche Auto</h3>
+                    <p>Passaggi di proprietà, immatricolazioni, reimmatricolazioni e targhe per auto, moto e ciclomotori.</p>
+                    <a href="pratiche-auto.html" class="scopri-button">Scopri di più</a>
+                </div>
+                
+                <!-- 4) Bolli Auto -->
+                <div class="servizio-card">
+                    <div class="servizio-icon-img">
+                        <img src="images/icone/bolli.png" alt="Icona bolli auto">
+                    </div>
+                    <h3>Bolli Auto</h3>
+                    <p>Servizio di pagamento bolli auto, consulenza e supporto per tutte le scadenze dei tuoi veicoli.</p>
+                    <a href="bolli-auto.html" class="scopri-button">Scopri di più</a>
+                </div>
+                
+                <!-- 5) Carta di Qualificazione -->
+                <div class="servizio-card">
                     <div class="servizio-icon-img">
                         <img src="images/icone/cqc.png" alt="Icona CQC">
                     </div>
-                    <h3>Carta di Qualificazione Conducente</h3>
-                    <p>Corsi e rinnovi CQC per professionisti</p>
-                </div>
-
-                <div class="servizio-card">
-                    <div class="servizio-icon-img">
-                        <img src="images/icone/passaggio-proprieta.png" alt="Icona passaggio proprietà">
-                    </div>
-                    <h3>Passaggio di Proprietà</h3>
-                    <p>Pratiche per passaggio proprietà auto e moto</p>
+                    <h3>Carta di Qualificazione</h3>
+                    <p>Corsi CQC merci e persone per professionisti. Formazione continua e rinnovi. Corsi programmati in settimane prestabilite.</p>
+                    <a href="cqc.html" class="scopri-button">Scopri di più</a>
                 </div>
                 
+                <!-- 6) Sermetra -->
                 <div class="servizio-card">
                     <div class="servizio-icon-img">
-                        <img src="images/icone/targhe.png" alt="Icona targhe">
+                        <img src="images/icone/sermetra.png" alt="Icona Sermetra">
                     </div>
-                    <h3>Targhe Veicoli</h3>
-                    <p>Targhe per auto, moto e ciclomotori</p>
+                    <h3>Sermetra</h3>
+                    <p>Consorzio Sermetra: PEC, Posta Certificata, SPID e servizi digitali certificati per privati e aziende.</p>
+                    <a href="sermetra.html" class="scopri-button">Scopri di più</a>
                 </div>
                 
-                <div class="servizio-card">
-                    <div class="servizio-icon-img">
-                        <img src="images/icone/immatricolazioni.png" alt="Icona immatricolazioni">
-                    </div>
-                    <h3>Immatricolazioni</h3>
-                    <p>Immatricolazione e reimmatricolazione veicoli</p>
-                </div>
-                
+                <!-- 7) Porto d'Armi -->
                 <div class="servizio-card">
                     <div class="servizio-icon-img">
                         <img src="images/icone/porto-armi.png" alt="Icona porto d'armi">
                     </div>
                     <h3>Porto d'Armi</h3>
-                    <p>Rilascio e rinnovo porto d'armi</p>
+                    <p>Rilascio e rinnovo porto d'armi. Pratiche complete e supporto per tutta la documentazione necessaria.</p>
+                    <a href="porto-armi.html" class="scopri-button">Scopri di più</a>
                 </div>
-                
-                <div class="servizio-card">
-                    <div class="servizio-icon-img">
-                        <img src="images/icone/bolli.png" alt="Icona bolli auto">
-                    </div>
-                    <h3>Pagamento Bolli Auto</h3>
-                    <p>Servizio di pagamento bolli auto</p>
-                </div>
-                
-                <div class="servizio-card">
-                    <div class="servizio-icon-img">
-                        <img src="images/icone/visite-mediche.png" alt="Icona visite mediche">
-                    </div>
-                    <h3>Visite Mediche</h3>
-                    <p>Con medico militare competente in sede</p>
-                </div>
-                
-                <div class="servizio-card">
-                    <div class="servizio-icon-img">
-                        <img src="images/icone/sermetra.png" alt="Icona certificazioni">
-                    </div>
-                    <h3>Certificazioni SERMETRA</h3>
-                    <p>PEC, Posta Certificata e SPID</p>
-                </div>
-                
             </div>
         </div>
     </section>
