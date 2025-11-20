@@ -295,7 +295,7 @@
             width: 100%;
             height: 100%;
             object-fit: contain;
-            filter: brightness(0) invert(1); /* Icone bianche */
+            filter: brightness(0); /* Icone bianche */
         }
         
         /* ANNUNCI CQC */
@@ -439,6 +439,7 @@
             }
         }
     </style>
+
 </head>
 <body>
 <!-- HEADER -->
@@ -449,7 +450,7 @@
                 <img src="images/semaforo.png" alt="Logo Autoscuola La Torre" class="logo-img">
                 <div class="logo-text">
                     <h1>Autoscuola "La Torre"</h1>
-                    <div class="slogan">La tua patente dal 1990</div>
+                    <div class="slogan">La tua patente dal 1995</div>
                 </div>
             </div>
 
@@ -458,13 +459,23 @@
                 <a href="#home">Home</a>
                 <a href="#storia">La Nostra Storia</a>
                 <a href="#servizi">Servizi</a>
-                <a href="#annunci">Corsi CQC</a>
                 <a href="#galleria">Galleria</a>
+                <a href="#annunci">Corsi CQC</a>
                 <a href="#contatti">Contatti</a>
             </nav>
 
-            <!-- HAMBURGER BUTTON -->
+             <!-- HAMBURGER BUTTON -->
             <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+            <!-- MENU MOBILE -->
+            <nav class="mobile-menu" id="mobileMenu">
+                <a href="#home" onclick="toggleMenu()">Home</a>
+                <a href="#storia" onclick="toggleMenu()">La Nostra Storia</a>
+                <a href="#servizi" onclick="toggleMenu()">Servizi</a>
+                <a href="#annunci" onclick="toggleMenu()">Corsi CQC</a>
+                <a href="#galleria" onclick="toggleMenu()">Galleria</a>
+                <a href="#contatti" onclick="toggleMenu()">Contatti</a>
+            </nav>
 
         </div>
     </header>
@@ -483,7 +494,7 @@
         <div class="container">
             <div class="storia-content">
                 <p>La nostra storia inizia molti anni fa come agenzia di pratiche auto, un punto di riferimento affidabile per la comunità di Carinola e dintorni. Con passione e dedizione, abbiamo costruito nel tempo una solida reputazione basata sulla competenza e sul servizio al cliente.</p>
-                <p>Nel 1990 abbiamo compiuto un importante passo avanti trasformando la nostra attività in un'autoscuola a tutti gli effetti. Da allora, come <strong>Autoscuola "La Torre"</strong>, abbiamo accompagnato migliaia di persone nel conseguimento della patente, crescendo insieme alla nostra comunità e mantenendo sempre vivo lo spirito di servizio che ci ha sempre contraddistinto.</p>
+                <p>Nel 1995 abbiamo compiuto un importante passo avanti trasformando la nostra attività in un'autoscuola a tutti gli effetti. Da allora, come <strong>Autoscuola "La Torre"</strong>, abbiamo accompagnato migliaia di persone nel conseguimento della patente, crescendo insieme alla nostra comunità e mantenendo sempre vivo lo spirito di servizio che ci ha sempre contraddistinto.</p>
             </div>
         </div>
     </section>
@@ -573,13 +584,6 @@
                     <p>PEC, Posta Certificata e SPID</p>
                 </div>
                 
-                <div class="servizio-card">
-                    <div class="servizio-icon-img">
-                        <img src="images/icone/rinnovi-cqc.png" alt="Icona rinnovi CQC">
-                    </div>
-                    <h3>Rinnovi CQC</h3>
-                    <p>Formazione continua professionisti</p>
-                </div>
             </div>
         </div>
     </section>
