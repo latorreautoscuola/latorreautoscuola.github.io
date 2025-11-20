@@ -22,8 +22,8 @@
         
         /* HEADER */
         header {
-            background: linear-gradient(135deg, #2c3e50, #34495e);
-            color: white;
+            background: #ffffff; /* Sfondo bianco */
+            color: #333; /* Testo scuro */
             padding: 1rem 0;
             box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
             position: fixed;
@@ -53,7 +53,6 @@
             width: 60px;
             height: 60px;
             object-fit: contain;
-            filter: brightness(0) invert(1); /* Trasforma il logo in bianco */
         }
         
         .logo-text h1 {
@@ -65,7 +64,7 @@
         .logo-text .slogan {
             font-size: 0.85rem;
             opacity: 0.9;
-            color: #ecf0f1;
+            color: #666; /* Grigio scuro per lo slogan */
         }
 
         /* NAVIGATION */
@@ -75,7 +74,7 @@
         }
         
         nav a {
-            color: white;
+            color: #333; /* Testo scuro */
             text-decoration: none;
             font-weight: 500;
             transition: all 0.3s;
@@ -85,7 +84,7 @@
         
         nav a:hover {
             color: #e74c3c;
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(231, 76, 60, 0.1);
         }
 
         /* HAMBURGER MENU BUTTON */
@@ -93,7 +92,7 @@
             display: none;
             font-size: 2rem;
             cursor: pointer;
-            color: white;
+            color: #333;
             user-select: none;
         }
 
@@ -102,7 +101,7 @@
             display: none;
             flex-direction: column;
             gap: 1rem;
-            background: #2c3e50;
+            background: #ffffff;
             padding: 1rem;
             position: absolute;
             right: 20px;
@@ -110,6 +109,11 @@
             border-radius: 10px;
             width: 200px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            border: 1px solid #ddd;
+        }
+
+        nav.nav-links.mobile a {
+            color: #333;
         }
 
         nav.nav-links.mobile.show {
