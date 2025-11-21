@@ -75,10 +75,97 @@
             border-left: 4px solid #2196f3;
         }
 
+        /* NUOVO STILE PER IL RIQUADRO RINNOVO PATENTE */
+        .renewal-box {
+            background: linear-gradient(135deg, #ffffff, #f8f9fa);
+            border: 2px solid #3498db;
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2.5rem 0;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .renewal-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #3498db, #2ecc71);
+            border-radius: 12px 12px 0 0;
+        }
+
+        .renewal-box h3 {
+            color: #2c3e50;
+            margin-top: 0;
+            font-size: 1.5rem;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 0.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .renewal-list {
+            list-style-type: none;
+            padding-left: 0;
+            margin: 1.5rem 0;
+        }
+
+        .renewal-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid #ecf0f1;
+            position: relative;
+            padding-left: 35px;
+            font-size: 1.05rem;
+        }
+
+        .renewal-list li:last-child {
+            border-bottom: none;
+        }
+
+        .renewal-list li:before {
+            content: "✓";
+            color: #2ecc71;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            font-size: 1.3rem;
+            background: #ecf0f1;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .renewal-list strong {
+            color: #3498db;
+        }
+
+        .renewal-note {
+            background-color: #e7f3ff;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+            font-size: 0.95rem;
+            border-left: 4px solid #3498db;
+        }
+
         @media (max-width: 768px) {
             .services-grid {
                 grid-template-columns: 1fr;
                 gap: 1.5rem;
+            }
+            
+            .renewal-box {
+                padding: 1.5rem;
+            }
+            
+            .renewal-list li {
+                padding-left: 30px;
             }
         }
     </style>
@@ -153,31 +240,24 @@
                     </ul>
                 </div>
 
-                <h3>Quando Fare il Rinnovo</h3>
-                <p>Il rinnovo della patente è obbligatorio:</p>
-                <ul class="feature-list">
-                    <li><strong>Ogni 10 anni</strong> per i conducenti sotto i 50 anni</li>
-                    <li><strong>Ogni 5 anni</strong> per i conducenti tra i 50 e i 70 anni</li>
-                    <li><strong>Ogni 3 anni</strong> per i conducenti over 70</li>
-                    <li><strong>Ogni 2 anni</strong> per patenti CQC e professionali</li>
-                </ul>
+                <!-- RIQUADRO PER IL RINNOVO PATENTE -->
+                <div class="renewal-box">
+                    <h3>📅 Quando Fare il Rinnovo</h3>
+                    <p>Il rinnovo della patente è obbligatorio:</p>
+                    <ul class="renewal-list">
+                        <li><strong>Ogni 10 anni</strong> per i conducenti sotto i 50 anni</li>
+                        <li><strong>Ogni 5 anni</strong> per i conducenti tra i 50 e i 70 anni</li>
+                        <li><strong>Ogni 3 anni</strong> per i conducenti over 70</li>
+                        <li><strong>Ogni 2 anni</strong> per patenti CQC e professionali</li>
+                    </ul>
+                    <div class="renewal-note">
+                        <strong>Nota importante:</strong> Il rinnovo deve essere richiesto entro la data di scadenza indicata sulla patente. In caso di ritardo, potrebbero essere applicate sanzioni.
+                    </div>
+                </div>
 
                 <h3>Visite Mediche in Sede</h3>
                 <p>Comodamente nella nostra sede, puoi effettuare la visita medica obbligatoria con un <strong>medico militare competente</strong> abilitato. La visita include:</p>
-                <ul class="feature-list">
-                    <li>Accertamento dello stato di salute</li>
-                    <li>Test della vista</li>
-                    <li>Valutazione delle capacità psicofisiche</li>
-                    <li>Rilascio del certificato medico ufficiale</li>
-                </ul>
-
-                <h3>Tempi di Consegna</h3>
-                <p>I tempi approssimativi per i nostri servizi:</p>
-                <ul class="feature-list">
-                    <li><strong>Rinnovo patente:</strong> 15-20 giorni lavorativi</li>
-                    <li><strong>Duplicato per smarrimento:</strong> 10-15 giorni lavorativi</li>
-                    <li><strong>Convalida patente estera:</strong> 30-45 giorni lavorativi</li>
-                </ul>
+            
 
                 <div style="text-align: center; margin-top: 3rem;">
                     <a href="index.html#contatti" class="cta-button">Prenota un Appuntamento</a>
