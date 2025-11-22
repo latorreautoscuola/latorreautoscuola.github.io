@@ -1,0 +1,34 @@
+  <h3>Scadenze e Importi</h3>
+                <p>Il bollo auto va pagato entro specifiche scadenze:</p>
+                
+                <table class="cost-table">
+                    <thead>
+                        <tr>
+                            <th>Tipo Veicolo</th>
+                            <th>Scadenza</th>
+                            <th>Importo Indicativo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Auto fino a 100 kW</td>
+                            <td>Entro il 31/01 dell'anno successivo</td>
+                            <td>€ 2,58 per kW</td>
+                        </tr>
+                        <tr>
+                            <td>Auto oltre 100 kW</td>
+                            <td>Entro il 31/01 dell'anno successivo</td>
+                            <td>€ 3,87 per kW oltre i 100</td>
+                        </tr>
+                        <tr>
+                            <td>Moto</td>
+                            <td>Entro il 31/01 dell'anno successivo</td>
+                            <td>Da € 20 a € 120</td>
+                        </tr>
+                        <tr>
+                            <td>Ciclomotori</td>
+                            <td>Entro il 31/01 dell'anno successivo</td>
+                            <td>€ 21</td>
+                        </tr>
+                    </tbody>
+                </table>
