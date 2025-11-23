@@ -15,18 +15,19 @@
         
         .service-card {
             background: linear-gradient(135deg, #ffffff, #f8f9fa);
-            padding: 2rem;
+            padding: 1.5rem;
             border-radius: 12px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
             text-align: center;
             transition: all 0.3s;
             border: 1px solid #ecf0f1;
             position: relative;
-            min-height: 250px;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            gap: 1rem;
+            min-height: 180px;   /* molto più compatte */
         }
+
         
         .service-card::before {
             content: '';
@@ -52,9 +53,9 @@
         }
         
         .service-card p {
-            color: #666;
-            line-height: 1.6;
-            margin-bottom: 1.5rem;
+            margin: 0;
+            font-size: 0.95rem;
+            line-height: 1.45;
         }
 
         .content-section {
@@ -107,7 +108,7 @@
                 <img src="images/semaforo.png" alt="Logo Autoscuola La Torre" class="logo-img">
                 <div class="logo-text">
                     <h1>Autoscuola "La Torre"</h1>
-                    <div class="slogan">La tua patente dal 1995</div>
+                    <div class="slogan">La tua patente dal 1989</div>
                 </div>
             </div>
             <nav class="nav-desktop">
@@ -138,86 +139,60 @@
         </div>
     </section>
 
-    <section style="padding: 4rem 0;">
-        <div class="container">
-            <div class="content-section">
-                <h2>Servizi per il Tuo Veicolo</h2>
-                
-                <div class="services-grid">
-                    <div class="service-card">
-                        <h3>Passaggio di Proprietà</h3>
-                        <p>Trasferimento di proprietà di auto, moto e ciclomotori. Pratiche rapide e sicure.</p>
-                    </div>
-                    <div class="service-card">
-                        <h3>Immatricolazioni</h3>
-                        <p>Prima immatricolazione veicoli nuovi e usati. Targhe provvisorie e definitive.</p>
-                    </div>
-                    <div class="service-card">
-                        <h3>Reimmatricolazioni</h3>
-                        <p>Reimmatricolazione veicoli con targa estera o per cambio di residenza.</p>
-                    </div>
-                    <div class="service-card">
-                        <h3>Targhe Auto/Moto</h3>
-                        <p>Rilascio targhe per tutti i tipi di veicoli. Targhe personalizzate e standard.</p>
-                    </div>
+   <section style="padding: 4rem 0;">
+    <div class="container">
+        <div class="content-section">
+            <h2>Servizi per il Tuo Veicolo</h2>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Passaggio di Proprietà</h3>
+                    <p>Gestione completa del trasferimento di proprietà per auto, moto e ciclomotori con tempi rapidi e certificazione immediata.</p>
                 </div>
 
-                <div class="info-box">
-                    <h3>Perché Scegliere Noi</h3>
-                    <ul class="feature-list">
-                        <li><strong>Esperienza trentennale</strong> nel settore</li>
-                        <li><strong>Tempi rapidi</strong> di evasione delle pratiche</li>
-                        <li><strong>Supporto completo</strong> per tutta la documentazione</li>
-                        <li><strong>Consulenza gratuita</strong> prima di ogni pratica</li>
-                    </ul>
+                <div class="service-card">
+                    <h3>Immatricolazioni</h3>
+                    <p>Immatricolazione di veicoli nuovi e usati, emissione targhe provvisorie e definitive per qualsiasi categoria di veicolo.</p>
                 </div>
 
-                <div class="documents-box">
-                    <h3>📄 Documenti Richiesti</h3>
-                    <p><strong>Per passaggio di proprietà:</strong></p>
-                    <ul class="feature-list">
-                        <li>Documenti di identità di acquirente e venditore</li>
-                        <li>Codici fiscali</li>
-                        <li>Libretto di circolazione</li>
-                        <li>Contratto di compravendita</li>
-                        <li>Attestazione di avvenuto pagamento del bollo</li>
-                    </ul>
-                    
-                    <p><strong>Per immatricolazione:</strong></p>
-                    <ul class="feature-list">
-                        <li>Documento di identità</li>
-                        <li>Codice fiscale</li>
-                        <li>Fattura di acquisto o contratto</li>
-                        <li>Certificato di conformità</li>
-                        <li>Attestazione di rischio RCA</li>
-                    </ul>
+                <div class="service-card">
+                    <h3>Reimmatricolazioni</h3>
+                    <p>Reimmatricolazioni per smarrimento, deterioramento, furto targa o cambio di residenza, con assistenza continua.</p>
                 </div>
 
-                <h3>Tempi di Evasione</h3>
-                <p>I nostri tempi medi per le pratiche:</p>
-                <ul class="feature-list">
-                    <li><strong>Passaggio di proprietà:</strong> 3-5 giorni lavorativi</li>
-                    <li><strong>Immatricolazione veicolo nuovo:</strong> 5-7 giorni lavorativi</li>
-                    <li><strong>Reimmatricolazione:</strong> 7-10 giorni lavorativi</li>
-                    <li><strong>Rilascio targhe:</strong> Immediato per targhe standard</li>
-                </ul>
+                <div class="service-card">
+                    <h3>Targhe Auto/Moto</h3>
+                    <p>Rilascio e sostituzione targhe, anche personalizzate, per auto, moto, rimorchi e veicoli speciali.</p>
+                </div>
 
-                <h3>Servizi Correlati</h3>
-                <p>Oltre alle pratiche auto, offriamo anche:</p>
-                <ul class="feature-list">
-                    <li>Pagamento bolli auto</li>
-                    <li>Visure PRA</li>
-                    <li>Certificati di proprietà</li>
-                    <li>Pratiche per veicoli d'epoca</li>
-                    <li>Supporto per importazione veicoli</li>
-                </ul>
+                <div class="service-card">
+                    <h3>Pratiche Macchine Agricole e Operatrici</h3>
+                    <p>Iscrizioni, passaggi, aggiornamenti e autorizzazioni per trattori, macchine agricole e mezzi operativi.</p>
+                </div>
 
-                <div style="text-align: center; margin-top: 3rem;">
-                    <a href="index.html#contatti" class="cta-button">Richiedi un Preventivo</a>
+                <div class="service-card">
+                    <h3>Radiazione per Esportazione</h3>
+                    <p>Radiazione del veicolo dal PRA per esportazione all’estero, con rilascio della documentazione necessaria.</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>Rettifiche e Variazioni PRA e Motorizzazione</h3>
+                    <p>Aggiornamenti e correzioni su dati tecnici, anagrafici o amministrativi presso PRA e Motorizzazione.</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>Visure Camera di Commercio e PRA</h3>
+                    <p>Visure aggiornate su veicoli, aziende, proprietà e situazioni giuridiche, ottenibili in pochi minuti.</p>
                 </div>
             </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="index.html#contatti" class="cta-button">Richiedi un Preventivo</a>
+            </div>
         </div>
-    </section>
+    </div>
+</section>
+
 
     <!-- FOOTER -->
     <footer>
