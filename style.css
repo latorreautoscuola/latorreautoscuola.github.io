@@ -601,7 +601,7 @@
         /* CONTATTI */
         #contatti {
             background: linear-gradient(135deg, #e74c3c, #c0392b);
-            color: white;
+            color: rgb(0, 0, 0);
         }
 
         #contatti h2 {
