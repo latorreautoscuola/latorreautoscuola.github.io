@@ -428,20 +428,6 @@
             background: linear-gradient(135deg, #fff, #f8fff9);
         }
 
-        .avviso-badge {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            background: #0077cc;
-            color: white;
-            padding: 0.4rem 1rem;
-            border-radius: 20px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
         .avviso-importante .avviso-badge {
             background: #e74c3c;
         }
