@@ -423,8 +423,8 @@
             background: linear-gradient(135deg, #fff, #fff9f9);
         }
 
-        .avviso-card.avviso-promo {
-            border-left: 4px solid #27ae60;
+        .avviso-card.avviso-info {
+            border-left: 4px solid #1e00a3;
             background: linear-gradient(135deg, #fff, #f8fff9);
         }
 
