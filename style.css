@@ -601,11 +601,11 @@
         /* CONTATTI */
         #contatti {
             background: linear-gradient(135deg, #e74c3c, #c0392b);
-            color: rgb(0, 0, 0);
+            color: rgb(0, 0, 0, 0.1);
         }
 
         #contatti h2 {
-            color: rgb(0, 0, 0);
+            color: rgb(0, 0, 0, 0.1);
         }
         
         .contatti-grid {
