@@ -392,14 +392,14 @@
     }
     
     .servizi-grid.compact .servizio-icon-img {
-        width: 60px;
-        height: 60px;
+        width: 70px;
+        height: 70px;
         margin-bottom: 10px;
     }
     
     .servizi-grid.compact .servizio-icon-img img {
-        max-width: 50px;
-        max-height: 50px;
+        max-width: 60px;
+        max-height: 60px;
     }
     
     .servizi-grid.compact .servizio-card h3 {
