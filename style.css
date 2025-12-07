@@ -784,6 +784,30 @@
             color: #2c3e50;
             font-size: 1.2rem;
         }
+
+        /* STILE PER LINK INSTAGRAM NEI CONTATTI */
+        .contatto-info .instagram-link {
+            color: #E4405F; /* Colore Instagram */
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            padding: 2px 6px;
+            border-radius: 4px;
+            background: rgba(228, 64, 95, 0.1);
+            display: inline-block;
+            margin-left: 5px;
+        }
+
+        .contatto-info .instagram-link:hover {
+            background: #E4405F;
+            color: white;
+            transform: translateY(-1px);
+        }
+
+        /* Stile per tutte le icone Instagram */
+        .fa-instagram {
+            color: #E4405F;
+        }
         
         /* FOOTER */
         footer {
