@@ -511,11 +511,12 @@
 
         .bacheca-footer {
             text-align: center;
-            padding: 1.5rem;
             background: #f8f9fa;
             border-radius: 10px;
             border: 1px solid #e9ecef;
-            margin-top: 1.5rem;
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
         }
 
         .bacheca-footer p {
