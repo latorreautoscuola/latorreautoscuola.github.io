@@ -787,26 +787,29 @@
 
         /* STILE PER LINK INSTAGRAM NEI CONTATTI */
         .contatto-info .instagram-link {
-            color: #E4405F; /* Colore Instagram */
+            color: #333; /* Nero come il resto del testo */
             text-decoration: none;
-            font-weight: 600;
+            font-weight: normal; /* Non in grassetto */
             transition: all 0.3s;
             padding: 2px 6px;
             border-radius: 4px;
-            background: rgba(228, 64, 95, 0.1);
             display: inline-block;
             margin-left: 5px;
         }
 
         .contatto-info .instagram-link:hover {
-            background: #E4405F;
-            color: white;
-            transform: translateY(-1px);
+            color: #E4405F; /* Colore Instagram solo al passaggio del mouse */
+            text-decoration: underline;
         }
 
-        /* Stile per tutte le icone Instagram */
+        /* Icona WhatsApp verde (già gestita inline) */
+        .fa-whatsapp {
+            color: #25D366; /* Verde WhatsApp */
+        }
+
+        /* Icona Instagram normale */
         .fa-instagram {
-            color: #E4405F;
+            color: #333; /* Nero come le altre icone */
         }
         
         /* FOOTER */
