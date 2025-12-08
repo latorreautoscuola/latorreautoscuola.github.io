@@ -862,50 +862,18 @@
             color: #333; /* Nero come le altre icone */
         }
 
-        .orari-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    margin: 20px 0;
-}
+        .orari-icona {
+            margin-top: 20px;
+            font-size: 3.5rem;
+            color: #e74c3c;
+            opacity: 0.2;
+        }
 
-.giorno {
-    text-align: center;
-    padding: 15px 10px;
-    background: #f8f9fa;
-    border-radius: 8px;
-    border: 1px solid #e9ecef;
-}
-
-.giorno.chiuso {
-    background: #fff5f5;
-    border-color: #ffe0e0;
-}
-
-.giorno strong {
-    display: block;
-    margin-bottom: 10px;
-    color: #2c3e50;
-}
-
-.fasce {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.giorno.chiuso .fasce span {
-    color: #e74c3c;
-    font-weight: 600;
-}
-
-.orari-info {
-    margin-top: 15px;
-    padding-top: 15px;
-    border-top: 1px dashed #ddd;
-    color: #666;
-    font-size: 0.9rem;
-}
+        .orari-nota {
+            margin-top: 15px;
+            color: #666;
+            font-style: italic;
+        }
         
         /* FOOTER */
         footer {
