@@ -862,65 +862,69 @@
             color: #333; /* Nero come le altre icone */
         }
 
+        /* Icona più grande e visibile */
         .orari-icona {
             margin-top: 20px;
-            font-size: 5rem;
+            margin-bottom: 25px; /* Spazio sotto l'icona */
+            font-size: 6rem; /* Ancora più grande */
             color: #e74c3c;
-            opacity: 0.4;
-            transition: all 0.3s ease; /* Aggiunta transizione per hover */
+            opacity: 0.5; /* Più visibile */
+            transition: all 0.3s ease;
+            text-align: center;
         }
 
-        /* Opzionale: effetto al passaggio del mouse */
         .orari-icona:hover {
-            opacity: 0.6;
+            opacity: 0.7;
             transform: scale(1.05);
         }
 
-        
-        .orari-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 15px;
-            margin: 20px 0;
-        }
-
-        .giorno {
+        /* Stile per la lista degli orari */
+        .orari-lista {
+            margin: 10px 0 20px;
             text-align: center;
-            padding: 15px 10px;
-            background: #f8f9fa;
-            border-radius: 8px;
-            border: 1px solid #e9ecef;
         }
 
-        .giorno.chiuso {
-            background: #fff5f5;
-            border-color: #ffe0e0;
+        .orario-item {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #f0f0f0;
         }
 
-        .giorno strong {
+        .orario-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        .orario-item strong {
             display: block;
-            margin-bottom: 10px;
+            font-size: 1.1rem;
             color: #2c3e50;
-        }
-
-        .fasce {
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
-        }
-
-        .giorno.chiuso .fasce span {
-            color: #e74c3c;
+            margin-bottom: 8px;
             font-weight: 600;
         }
 
-        .orari-info {
-            margin-top: 15px;
-            padding-top: 15px;
-            border-top: 1px dashed #ddd;
-            color: #666;
-            font-size: 0.9rem;
+        .orario-item p {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.5;
+            margin: 0;
         }
+
+        .orario-item.chiuso p {
+            color: #e74c3c;
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+
+        /* Per allineare verticalmente con le altre card */
+        .contatto-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+        }
+
+        
 
         
         /* FOOTER */
