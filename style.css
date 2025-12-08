@@ -769,20 +769,43 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
+            align-items: stretch;
         }
         
         .contatto-info {
             text-align: center;
             background: rgb(255, 255, 255);
-            padding: 2rem;
+            padding: 2.5rem 2rem;
             border-radius: 10px;
             backdrop-filter: blur(10px);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+            border: 1px solid #e9ecef;
         }
         
         .contatto-info h3 {
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
             color: #2c3e50;
-            font-size: 1.2rem;
+            font-size: 1.4rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+        .contatto-info p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            color: #495057;
+        }
+
+        /* Icone più grandi */
+        .contatto-info .fa-solid, 
+        .contatto-info .fa-brands,
+        .contatto-info .fa-regular {
+            font-size: 1.3rem;
         }
         /* Stile per link Google Maps */
         .maps-link {
@@ -799,15 +822,17 @@
 
         /* Mini mappa */
         .mini-mappa {
-            margin-top: 15px;
+            margin-top: auto; /* Spinge la mappa verso il basso */
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
             border: 1px solid #e0e0e0;
+            height: 200px;
         }
 
-        /* Per rendere la mappa responsive */
         .mini-mappa iframe {
+            width: 100%;
+            height: 100%;
             display: block;
         }
                 /* STILE PER LINK INSTAGRAM NEI CONTATTI */
