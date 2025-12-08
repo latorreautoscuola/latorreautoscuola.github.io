@@ -862,22 +862,6 @@
             color: #333; /* Nero come le altre icone */
         }
 
-        /* Icona più grande e visibile */
-        .orari-icona {
-            margin-top: 20px;
-            margin-bottom: 25px; /* Spazio sotto l'icona */
-            font-size: 6rem; /* Ancora più grande */
-            color: #e74c3c;
-            opacity: 0.5; /* Più visibile */
-            transition: all 0.3s ease;
-            text-align: center;
-        }
-
-        .orari-icona:hover {
-            opacity: 0.7;
-            transform: scale(1.05);
-        }
-
         /* Stile per la lista degli orari */
         .orari-lista {
             margin: 10px 0 20px;
