@@ -642,39 +642,6 @@
             color: white;
         }
 
-      /* CORREZIONE FOOTER BACHECA - TESTO COMPLETO SENZA TRONCATURA */
-        .bacheca-footer {
-            text-align: center;
-            margin-top: 30px;
-            padding: 15px;
-            border-top: 1px solid #eee;
-            background: #f8f9fa;
-            border-radius: 8px;
-            width: 100%;
-            display: block;
-        }
-
-        .bacheca-footer p {
-            margin: 0;
-            color: #495057;
-            font-size: 1rem;
-            font-weight: 500;
-            width: 100%;
-            display: block;
-            line-height: 1.5;
-            white-space: normal; /* Permette andare a capo */
-            word-wrap: break-word; /* Permette di spezzare le parole */
-            overflow: visible; /* Mostra tutto il testo */
-        }
-
-        /* Per schermi più piccoli */
-        @media (max-width: 768px) {
-            .bacheca-footer p {
-                white-space: normal;
-                text-align: center;
-            }
-        }
-
         /* Per far estendere il footer su tutta la larghezza */
         .bacheca-container {
             display: flex;
