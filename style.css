@@ -784,12 +784,31 @@
             color: #2c3e50;
             font-size: 1.2rem;
         }
+        /* Stile per link Google Maps */
+        .maps-link {
+            color: #333;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .maps-link:hover {
+            color: #4285F4; /* Blu Google */
+            text-decoration: underline;
+        }
+
         /* Mini mappa */
         .mini-mappa {
             margin-top: 15px;
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border: 1px solid #e0e0e0;
+        }
+
+        /* Per rendere la mappa responsive */
+        .mini-mappa iframe {
+            display: block;
         }
                 /* STILE PER LINK INSTAGRAM NEI CONTATTI */
         .contatto-info .instagram-link {
