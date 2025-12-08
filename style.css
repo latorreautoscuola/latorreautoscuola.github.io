@@ -862,13 +862,21 @@
             color: #333; /* Nero come le altre icone */
         }
 
-        .orologio-decorativo {
-            font-size: 4rem;
+        .orari-icona {
+            margin-top: 20px;
+            font-size: 5rem;
             color: #e74c3c;
-            opacity: 0.15;
-            margin: 15px 0 25px;
+            opacity: 0.4;
+            transition: all 0.3s ease; /* Aggiunta transizione per hover */
         }
 
+        /* Opzionale: effetto al passaggio del mouse */
+        .orari-icona:hover {
+            opacity: 0.6;
+            transform: scale(1.05);
+        }
+
+        
         .orari-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
